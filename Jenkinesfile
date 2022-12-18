@@ -5,7 +5,7 @@ pipeline{
 	{ steps { sh 'echo job-is-building'}}
 	
 	stage ('stage-print-second-message')
-	{steps (sh 'echo package-is-deployment')}
+	{steps {sh 'echo package-is-deployment'}}
 	stage ('stage-final-stage')
 	{steps {sh 'echo deploy to prod'}}
 }
